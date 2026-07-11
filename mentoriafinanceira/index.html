@@ -221,27 +221,12 @@
     .author-inner {
       display: flex;
       flex-direction: column;
-      gap: 24px;
-    }
-    @media (min-width: 680px) {
-      .author-inner {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 32px;
-      }
-      .author-photo-col { flex-shrink: 0; }
-      .author-right { flex: 1; }
     }
 
-    .author-photo-sm {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2.5px solid var(--gold-border);
-      display: block;
+    .author-right {
+      max-width: 640px;
     }
+
     .author-name {
       font-size: 22px;
       font-weight: 900;
@@ -501,7 +486,7 @@
       color: var(--gold);
       font-size: 13px;
       font-weight: 800;
-      margin-bottom: 14px;
+      flex-shrink: 0;
     }
     .step-card-title {
       font-size: 15px;
@@ -787,7 +772,7 @@
     }
     .step-strip-item {
       flex: 1;
-      padding: 22px 22px 24px;
+      padding: 16px 22px 18px;
       border-bottom: 1px solid var(--border);
     }
     .step-strip-item:last-child { border-bottom: none; }
@@ -798,25 +783,16 @@
       }
       .step-strip-item:last-child { border-right: none; }
     }
-    .step-strip-num {
-      display: inline-flex;
+    .step-strip-head {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 12px;
+      gap: 10px;
+      margin-bottom: 6px;
     }
     .step-strip-title {
       font-size: 14px;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 6px;
       line-height: 1.3;
     }
     .step-strip-body {
@@ -858,7 +834,7 @@
           </p>
           <p class="hero-statement">
             Em qualquer um dos casos, o problema não é a renda — <span class="hl-gold">é falta de direção.</span>
-            <span class="sub">E é exatamente isto que a <span class="hl-gold">Mentoria Financeira Individual</span> resolve!</span>
+            <span class="sub">A <span class="hl-gold">Mentoria Financeira Individual</span> resolve exatamente isto!</span>
           </p>
           <a class="btn-cta" href="https://tally.so/r/nP7vR1" target="_blank" rel="noopener">
             Faça o seu<br>Diagnóstico Financeiro
@@ -878,10 +854,6 @@
   <section class="author-block">
     <div class="wrap">
       <div class="author-inner">
-
-        <div class="author-photo-col">
-          <img class="author-photo-sm" src="/mentoriafinanceira/Fotos/A Foto 2.jpg" alt="Thiago Cotta">
-        </div>
 
         <div class="author-right">
           <p class="author-name">Thiago Cotta</p>
@@ -1135,23 +1107,31 @@
       <h2 class="section-title">Como funciona para começar:</h2>
       <div class="steps-strip">
         <div class="step-strip-item">
-          <div class="step-num-badge">1</div>
-          <p class="step-strip-title">Preencha o diagnóstico</p>
+          <div class="step-strip-head">
+            <div class="step-num-badge">1</div>
+            <p class="step-strip-title">Preencha o diagnóstico</p>
+          </div>
           <p class="step-strip-body">Poucos minutos pra você conhecer sua realidade.</p>
         </div>
         <div class="step-strip-item">
-          <div class="step-num-badge">2</div>
-          <p class="step-strip-title">Analiso pessoalmente</p>
+          <div class="step-strip-head">
+            <div class="step-num-badge">2</div>
+            <p class="step-strip-title">Analiso pessoalmente</p>
+          </div>
           <p class="step-strip-body">Leio cada resposta e avalio se realmente consigo te ajudar.</p>
         </div>
         <div class="step-strip-item">
-          <div class="step-num-badge">3</div>
-          <p class="step-strip-title">Contato em até 48h</p>
+          <div class="step-strip-head">
+            <div class="step-num-badge">3</div>
+            <p class="step-strip-title">Contato em até 48h</p>
+          </div>
           <p class="step-strip-body">Se a mentoria fizer sentido pra você, te chamo no WhatsApp.</p>
         </div>
         <div class="step-strip-item">
-          <div class="step-num-badge">4</div>
-          <p class="step-strip-title">Você decide com clareza</p>
+          <div class="step-strip-head">
+            <div class="step-num-badge">4</div>
+            <p class="step-strip-title">Você decide com clareza</p>
+          </div>
           <p class="step-strip-body">Conversa 1:1 para apresentar a mentoria. A decisão é sua.</p>
         </div>
       </div>
